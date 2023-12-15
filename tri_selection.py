@@ -1,3 +1,11 @@
+import random
+import time
+
+def trandom(l):
+    res=[]
+    for range(l):
+        res.append(random.randint(0, 1000))
+
 def imini(t: list[int]) -> int:
     """
     t est un tableau non vide d'entiers
@@ -30,8 +38,6 @@ def swap(t: list[int], i: int, j: int) -> None:
     t[i] = t[j]
     t[j] = temp
 
-
-
 def tri_selection(t):
     """
     >>> t = [7, 42, 87, 123, 2, 7, 5]
@@ -41,4 +47,3 @@ def tri_selection(t):
     for k in range(len(t)): # répéter autant de fois que la taille de t
         i = imini(t[k:]) # renvoie l'indice du min dans t[k:]
         swap(t, k, i + k) # l'indice de cette val dans t est i + k (décalage)
-
