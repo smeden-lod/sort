@@ -51,4 +51,4 @@ def tri_selection(t):
 time1=time.time
 time2=time.time
 print(tri_selection(trandom(100)))
-print(time2-time1)
+print(round(time2-time1, 3))
