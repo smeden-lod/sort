@@ -5,6 +5,7 @@ def trandom(l):
     listrandom=[]
     for _ in range(l):
         listrandom.append(random.randint(0, 1000))
+    return listrandom
 
 def imini(t: list[int]) -> int:
     """
@@ -49,6 +50,7 @@ def tri_selection(t):
         swap(t, k, i + k) # l'indice de cette val dans t est i + k (décalage)
 
 time1=time.time
-time2=time.time
 print(tri_selection(trandom(100)))
-print(round(time2-time1, 3))
+time2=time.time
+tempexec = time2 - time1
+print(round(tempexec, 3))
