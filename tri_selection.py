@@ -4,7 +4,7 @@ import time
 def trandom(l):
     listrandom=[]
     for _ in range(l):
-        listrandom.append(random.randint(0, 1000))
+        listrandom.append(random.randint(0, 10000))
     return listrandom
 
 def imini(t: list[int]) -> int:
@@ -48,9 +48,10 @@ def tri_selection(t):
     for k in range(len(t)): # répéter autant de fois que la taille de t
         i = imini(t[k:]) # renvoie l'indice du min dans t[k:]
         swap(t, k, i + k) # l'indice de cette val dans t est i + k (décalage)
+    return t
 
-time1=time.time
-print(tri_selection(trandom(100)))
-time2=time.time
+time1=time.time()
+print(tri_selection(trandom(1000)))
+time2=time.time()
 tempexec = time2 - time1
-print(round(tempexec, 3))
+print(round(tempexec, 3), "secondes")
