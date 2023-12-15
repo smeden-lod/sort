@@ -41,4 +41,3 @@ def tri_selection(t):
     for k in range(len(t)): # répéter autant de fois que la taille de t
         i = imini(t[k:]) # renvoie l'indice du min dans t[k:]
         swap(t, k, i + k) # l'indice de cette val dans t est i + k (décalage)
-
