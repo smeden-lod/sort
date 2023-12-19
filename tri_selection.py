@@ -51,7 +51,12 @@ def tri_selection(t):
     return t
 
 time1=time.time()
-print(tri_selection(trandom(1000)))
+print(tri_selection(trandom(10000)))
 time2=time.time()
 tempexec = time2 - time1
 print(round(tempexec, 3), "secondes")
+
+tempexec_str = "%.8f\n" % (tempexec)
+f = open("log.txt", "a")
+f.write(tempexec_str)
+f.close()
