@@ -3,15 +3,14 @@
 #include <assert.h>
 
 void swap(int t[], int n, int i, int j){
-    assert (0 <= i < n);
-    assert (0 <= j < n);
     int temp = t[i];
     t[i] = t[j];
     t[j] = temp;
 }
 
-int main()
-{
+
+
+int main(){
     int t[4] = {1, 3, 7, 9};
     printf("{%d, %d, %d, %d}\n", t[0], t[1], t[2], t[3]);
     printf("  swaping...\n");
